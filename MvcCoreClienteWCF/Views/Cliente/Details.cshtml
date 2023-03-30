@@ -1,0 +1,22 @@
+﻿@model Cliente
+
+<h1>Details</h1>
+
+<a asp-controller="Cliente" asp-action="Index">
+    Volver a Clientes
+</a>
+
+<ul class="list-group">
+    <li class="list-group-item">
+         @Model.Nombre @Model.Direccion 
+    </li>
+    <li class="list-group-item">
+         @Model.Direccion
+    </li>
+    <li class="list-group-item">
+        @Model.Email
+    </li>
+    <li class="list-group-item">
+        <img src="@Model.Imagen" style="width: 350px; height: 350px" />
+    </li>
+</ul>

@@ -1,5 +1,6 @@
 using MvcCoreClienteWCF.Services;
 using ReferenceCatastro;
+using ReferenceClientes;
 using ReferenceCoches;
 using ReferenceMetodosVarios;
 
@@ -14,6 +15,10 @@ builder.Services.AddTransient<ServicesCountries>();
 
 builder.Services.AddTransient<ServiceCoches>();
 builder.Services.AddTransient<CochesContractClient>();
+
+builder.Services.AddTransient<ServiceClientes>();
+builder.Services.AddTransient<ClientesContractClient>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

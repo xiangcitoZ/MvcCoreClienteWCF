@@ -1,0 +1,39 @@
+﻿@model Cliente[]
+
+
+<h1 style="color:blue">
+    Coches WCF
+</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Email</th>
+            <th>Imagen</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Cliente car in Model)
+        {
+            <tr>
+                <td>@car.Nombre</td>
+                <td>@car.Direccion</td>
+                <td>@car.Email</td>
+                <td>
+                    <img src="@car.Imagen" style="width:250px; height:250px" />
+
+                </td>
+                <td>
+                    <a asp-controller="Cliente" asp-action="Details"
+                   asp-route-idcliente="@car.IdCliente" class="btn btn-info">
+                        Details
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
